@@ -11,6 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -31,14 +32,9 @@ public class MainActivity extends AppCompatActivity {
     public void settingSideNavBar()
     {
         // 툴바 생성
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_dehaze_24);
-        }
 
         // 사이드 네브바 구현
 
@@ -75,6 +71,11 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }
+        });
+
+        ImageButton button2 = findViewById(R.id.ib_menu);
+        button2.setOnClickListener(v -> {
+            drawerLayout.open();
         });
 
     }
