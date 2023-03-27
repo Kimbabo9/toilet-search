@@ -12,7 +12,7 @@
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="메 뉴"
+        android:text="공중화장실 찾기"
         android:textSize="30dp" />
 
 </LinearLayout>
