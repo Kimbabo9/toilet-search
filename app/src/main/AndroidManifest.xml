@@ -34,6 +34,8 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="09391262ee0573f9330ad8b661af6ee9" />
 
+        <activity android:name=".MapviewActivity"/>
+
 
     </application>
 
