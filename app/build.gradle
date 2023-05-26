@@ -44,7 +44,6 @@ android {
 }
 
 dependencies {
-
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -56,12 +55,14 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.5.3'
     annotationProcessor 'com.android.databinding:compiler:3.1.4'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
 
     implementation 'androidx.drawerlayout:drawerlayout:1.2.0'
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation files('libs/libDaumMapAndroid.jar')
+
+    implementation 'mysql:mysql-connector-java:8.0.23'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
 
 
 }
