@@ -14,7 +14,6 @@ public class ToiletInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_toilet_info);
 
         TextView textViewToiletName = findViewById(R.id.textViewToiletName);
-        TextView textViewToiletAddress = findViewById(R.id.textViewToiletAddress);
         TextView textViewopeningHours = findViewById(R.id.textViewopeningHours);
         TextView textViewmanagementAgency = findViewById(R.id.textViewmanagementAgency);
         TextView textViewunisexToilet = findViewById(R.id.textViewunisexToilet);
@@ -100,7 +99,6 @@ public class ToiletInfoActivity extends AppCompatActivity {
 
 
             textViewToiletName.setText(toiletName);
-            textViewToiletAddress.setText(toiletAddress);
         }
     }
 }
