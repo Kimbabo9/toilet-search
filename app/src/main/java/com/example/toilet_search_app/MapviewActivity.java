@@ -130,14 +130,14 @@ public class MapviewActivity extends AppCompatActivity {
                 double longitude = jsonObject.getDouble("위도");
                 String openingHours = jsonObject.getString("개방시간");
                 String managementAgency = jsonObject.getString("관리기관명");
-                boolean unisexToilet = jsonObject.getString("남녀공용화장실여부").equalsIgnoreCase("Y");
-                int menToiletCount = Integer.parseInt(jsonObject.getString("남성용-대변기수"));
-                int menUrinalCount = Integer.parseInt(jsonObject.getString("남성용-소변기수"));
+                String unisexToilet = jsonObject.getString("남녀공용화장실여부");
+                String menToiletCount = jsonObject.getString("남성용-대변기수");
+                String menUrinalCount = jsonObject.getString("남성용-소변기수");
                 int menChildrenToiletCount = Integer.parseInt(jsonObject.getString("남성용-어린이용대변기수"));
                 int menChildrenUrinalCount = Integer.parseInt(jsonObject.getString("남성용-어린이용소변기수"));
                 int menDisabledToiletCount = Integer.parseInt(jsonObject.getString("남성용-장애인용대변기수"));
                 int menDisabledUrinalCount = Integer.parseInt(jsonObject.getString("남성용-장애인용소변기수"));
-                boolean emergencyBellInstalled = jsonObject.getString("비상벨설치여부").equalsIgnoreCase("Y");
+                String emergencyBellInstalled = jsonObject.getString("비상벨설치여부");
                 String emergencyBellLocation = jsonObject.getString("비상벨설치장소");
                 int womenToiletCount = Integer.parseInt(jsonObject.getString("여성용-대변기수"));
                 int womenChildrenToiletCount = Integer.parseInt(jsonObject.getString("여성용-어린이용대변기수"));
@@ -146,17 +146,18 @@ public class MapviewActivity extends AppCompatActivity {
                 String locationMapAddress = jsonObject.getString("위치지도별주소");
                 String phoneNumber = jsonObject.getString("전화번호");
                 int toiletID = Integer.parseInt(jsonObject.getString("화장실ID"));
-                boolean restroomEntranceCCTVInstalled = jsonObject.getString("화장실입구CCTV설치유무").equalsIgnoreCase("Y");
+                String restroomEntranceCCTVInstalled = jsonObject.getString("화장실입구CCTV설치유무");
+
+                Map<String, Object> open = new HashMap<>();
+                open.put("openingHours", openingHours);
+                open.put("managementAgency", managementAgency);
+                open.put("unisexToilet", unisexToilet);
+                open.put("menToiletCount", menToiletCount);
+                open.put("menUrinalCount", menUrinalCount);
+
+                total.put(itemName, open);
 
 
-                Map<String, Object> test = new HashMap<>();
-                test.put("openingHours", openingHours);
-
-                //
-
-
-
-                total.put(itemName, test);
 
 
                 // 마커 생성
@@ -237,12 +238,19 @@ class MarkerEventListener implements MapView.POIItemEventListener {
 
                     intent.putExtra("toilet_address", "화장실 주소 정보를 여기에 넣으세요"); // 화장실 주소 정보 추가
 
-                    Map<String, Object> test = total.get(poiItem.getItemName());
+                    Map<String, Object> open = total.get(poiItem.getItemName());
 
                     // OBJECT 형태의 변수들을 원래 형식대로 변환해주는 작업이 필요함
 
-                    intent.putExtra("test", test.get("openingHours").toString());
+                    intent.putExtra("textViewopeningHours", open.get("openingHours").toString());
 
+                    intent.putExtra("textViewmanagementAgency", open.get("managementAgency").toString());
+
+                    intent.putExtra("textViewunisexToilet", open.get("unisexToilet").toString());
+
+                    intent.putExtra("textViewmenToiletCount", open.get("menToiletCount").toString());
+
+                    intent.putExtra("textViewmenUrinalCount", open.get("menUrinalCount").toString());
 
                     context.startActivity(intent);
                     break;
