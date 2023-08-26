@@ -133,19 +133,19 @@ public class MapviewActivity extends AppCompatActivity {
                 String unisexToilet = jsonObject.getString("남녀공용화장실여부");
                 String menToiletCount = jsonObject.getString("남성용-대변기수");
                 String menUrinalCount = jsonObject.getString("남성용-소변기수");
-                int menChildrenToiletCount = Integer.parseInt(jsonObject.getString("남성용-어린이용대변기수"));
-                int menChildrenUrinalCount = Integer.parseInt(jsonObject.getString("남성용-어린이용소변기수"));
-                int menDisabledToiletCount = Integer.parseInt(jsonObject.getString("남성용-장애인용대변기수"));
-                int menDisabledUrinalCount = Integer.parseInt(jsonObject.getString("남성용-장애인용소변기수"));
+                String menChildrenToiletCount = jsonObject.getString("남성용-어린이용대변기수");
+                String menChildrenUrinalCount = jsonObject.getString("남성용-어린이용소변기수");
+                String menDisabledToiletCount = jsonObject.getString("남성용-장애인용대변기수");
+                String menDisabledUrinalCount = jsonObject.getString("남성용-장애인용소변기수");
                 String emergencyBellInstalled = jsonObject.getString("비상벨설치여부");
                 String emergencyBellLocation = jsonObject.getString("비상벨설치장소");
-                int womenToiletCount = Integer.parseInt(jsonObject.getString("여성용-대변기수"));
-                int womenChildrenToiletCount = Integer.parseInt(jsonObject.getString("여성용-어린이용대변기수"));
-                int womenDisabledToiletCount = Integer.parseInt(jsonObject.getString("여성용-장애인용대변기수"));
+                String womenToiletCount = jsonObject.getString("여성용-대변기수");
+                String womenChildrenToiletCount = jsonObject.getString("여성용-어린이용대변기수");
+                String womenDisabledToiletCount = jsonObject.getString("여성용-장애인용대변기수");
                 String locationNumberAddress = jsonObject.getString("위치번호주소");
                 String locationMapAddress = jsonObject.getString("위치지도별주소");
                 String phoneNumber = jsonObject.getString("전화번호");
-                int toiletID = Integer.parseInt(jsonObject.getString("화장실ID"));
+                String toiletID = jsonObject.getString("화장실ID");
                 String restroomEntranceCCTVInstalled = jsonObject.getString("화장실입구CCTV설치유무");
 
                 Map<String, Object> open = new HashMap<>();
@@ -154,6 +154,20 @@ public class MapviewActivity extends AppCompatActivity {
                 open.put("unisexToilet", unisexToilet);
                 open.put("menToiletCount", menToiletCount);
                 open.put("menUrinalCount", menUrinalCount);
+                open.put("menChildrenToiletCount", menChildrenToiletCount);
+                open.put("menChildrenUrinalCount", menChildrenUrinalCount);
+                open.put("menDisabledToiletCount", menDisabledToiletCount);
+                open.put("menDisabledUrinalCount", menDisabledUrinalCount);
+                open.put("emergencyBellInstalled", emergencyBellInstalled);
+                open.put("emergencyBellLocation", emergencyBellLocation);
+                open.put("womenToiletCount", womenToiletCount);
+                open.put("womenChildrenToiletCount", womenChildrenToiletCount);
+                open.put("womenDisabledToiletCount", womenDisabledToiletCount);
+                open.put("locationNumberAddress", locationNumberAddress);
+                open.put("locationMapAddress", locationMapAddress);
+                open.put("phoneNumber", phoneNumber);
+                open.put("toiletID", toiletID);
+                open.put("restroomEntranceCCTVInstalled", toiletID);
 
                 total.put(itemName, open);
 
@@ -167,8 +181,6 @@ public class MapviewActivity extends AppCompatActivity {
                 marker.setMapPoint(MapPoint.mapPointWithGeoCoord(latitude, longitude));
                 marker.setMarkerType(MapPOIItem.MarkerType.BluePin);
                 marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
-
-                marker.setUserObject(jsonObject.getString("개방시간"));
 
                 mapView.addPOIItem(marker);
             }
@@ -236,7 +248,7 @@ class MarkerEventListener implements MapView.POIItemEventListener {
                     intent.putExtra("toilet_name", poiItem.getItemName());
 
 
-                    intent.putExtra("toilet_address", "화장실 주소 정보를 여기에 넣으세요"); // 화장실 주소 정보 추가
+
 
                     Map<String, Object> open = total.get(poiItem.getItemName());
 
@@ -251,6 +263,34 @@ class MarkerEventListener implements MapView.POIItemEventListener {
                     intent.putExtra("textViewmenToiletCount", open.get("menToiletCount").toString());
 
                     intent.putExtra("textViewmenUrinalCount", open.get("menUrinalCount").toString());
+
+                    intent.putExtra("textViewmenChildrenToiletCount", open.get("menChildrenToiletCount").toString());
+
+                    intent.putExtra("textViewmenChildrenUrinalCount", open.get("menChildrenUrinalCount").toString());
+
+                    intent.putExtra("textViewmenDisabledToiletCount", open.get("menDisabledToiletCount").toString());
+
+                    intent.putExtra("textViewmenDisabledUrinalCount", open.get("menDisabledUrinalCount").toString());
+
+                    intent.putExtra("textViewemergencyBellInstalled", open.get("emergencyBellInstalled").toString());
+
+                    intent.putExtra("textViewemergencyBellLocation", open.get("emergencyBellLocation").toString());
+
+                    intent.putExtra("textViewwomenToiletCount", open.get("womenToiletCount").toString());
+
+                    intent.putExtra("textViewwomenChildrenToiletCount", open.get("womenChildrenToiletCount").toString());
+
+                    intent.putExtra("textViewwomenDisabledToiletCount", open.get("womenDisabledToiletCount").toString());
+
+                    intent.putExtra("textViewlocationNumberAddress", open.get("locationNumberAddress").toString());
+
+                    intent.putExtra("textViewlocationMapAddress", open.get("locationMapAddress").toString());
+
+                    intent.putExtra("textViewphoneNumber", open.get("phoneNumber").toString());
+
+                    intent.putExtra("textViewtoiletID", open.get("toiletID").toString());
+
+                    intent.putExtra("textViewrestroomEntranceCCTVInstalled", open.get("restroomEntranceCCTVInstalled").toString());
 
                     context.startActivity(intent);
                     break;
