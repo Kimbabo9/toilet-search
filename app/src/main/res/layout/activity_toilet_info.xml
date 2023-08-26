@@ -1,0 +1,39 @@
+<!-- activity_toilet_info.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewToiletName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="화장실 이름" />
+
+    <TextView
+        android:id="@+id/textViewToiletAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textViewToiletName"
+        android:layout_marginBottom="16dp"
+        android:text="화장실 주소" />
+
+    <!-- 필요한 화장실 정보를 추가하는 TextView 등을 여기에 추가하세요 -->
+
+    <TextView
+        android:id="@+id/textViewTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="화장실 이름" />
+
+</RelativeLayout>
