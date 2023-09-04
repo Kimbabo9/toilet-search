@@ -11,7 +11,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="10dp"
         android:text="화장실 이름" />
 
 
@@ -21,10 +21,10 @@
         android:id="@+id/textViewopeningHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:text="개방시간" />
 
 
@@ -35,7 +35,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="70dp"
         android:text="관리기관명" />
 
     <TextView
@@ -45,7 +45,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="100dp"
         android:text="남녀공용화장실여부" />
 
     <TextView
@@ -55,7 +55,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="130dp"
         android:text="남성용-대변기수" />
 
     <TextView
@@ -65,7 +65,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="160dp"
         android:text="남성용-소변기수" />
 
     <TextView
@@ -75,7 +75,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="190dp"
         android:text="남성용-어린이용대변기수" />
 
     <TextView
@@ -85,7 +85,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="220dp"
         android:text="남성용-어린이용소변기수" />
 
     <TextView
@@ -95,7 +95,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="250dp"
         android:text="남성용-장애인용대변기수" />
 
     <TextView
@@ -105,7 +105,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="280dp"
         android:text="남성용-장애인용소변기수" />
 
     <TextView
@@ -115,7 +115,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="310dp"
         android:text="비상벨설치여부" />
 
     <TextView
@@ -125,7 +125,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="340dp"
         android:text="비상벨설치장소" />
 
     <TextView
@@ -135,7 +135,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="370dp"
         android:text="여성용-대변기수" />
 
     <TextView
@@ -145,7 +145,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="400dp"
         android:text="여성용-어린이용대변기수" />
 
     <TextView
@@ -155,7 +155,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="430dp"
         android:text="여성용-장애인용대변기수" />
 
     <TextView
@@ -165,7 +165,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="460dp"
         android:text="위치번호주소" />
 
     <TextView
@@ -175,7 +175,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="490dp"
         android:text="위치지도별주소" />
 
     <TextView
@@ -185,7 +185,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="520dp"
         android:text="전화번호" />
 
     <TextView
@@ -195,7 +195,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="550dp"
         android:text="화장실ID" />
 
     <TextView
@@ -205,7 +205,16 @@
         android:textSize="15sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="580dp"
         android:text="화장실입구CCTV설치유무" />
+
+    <Button
+        android:id="@+id/buttonAddToFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="즐겨찾기에 추가"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp" />
 
 </RelativeLayout>

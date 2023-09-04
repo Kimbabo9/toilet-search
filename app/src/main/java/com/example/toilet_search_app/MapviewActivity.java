@@ -167,7 +167,7 @@ public class MapviewActivity extends AppCompatActivity {
                 open.put("locationMapAddress", locationMapAddress);
                 open.put("phoneNumber", phoneNumber);
                 open.put("toiletID", toiletID);
-                open.put("restroomEntranceCCTVInstalled", toiletID);
+                open.put("restroomEntranceCCTVInstalled", restroomEntranceCCTVInstalled);
 
                 total.put(itemName, open);
 

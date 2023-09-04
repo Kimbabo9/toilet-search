@@ -38,67 +38,68 @@ public class ToiletInfoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent != null) {
             String toiletName = intent.getStringExtra("toilet_name");
+            textViewToiletName.setText("화장실 이름 : " + toiletName);
 
 
             String hours = intent.getStringExtra("textViewopeningHours");
-            textViewopeningHours.setText(hours);
+            textViewopeningHours.setText("개방시간 : " + hours);
 
             String manage = intent.getStringExtra("textViewmanagementAgency");
-            textViewmanagementAgency.setText(manage);
+            textViewmanagementAgency.setText("관리기관명 : " + manage);
 
             String unisex = intent.getStringExtra("textViewunisexToilet");
-            textViewunisexToilet.setText(unisex);
+            textViewunisexToilet.setText("남녀공용화장실여부 : " + unisex);
 
             String mentoilet = intent.getStringExtra("textViewmenToiletCount");
-            textViewmenToiletCount.setText(mentoilet);
+            textViewmenToiletCount.setText("남성용-대변기수 : " + mentoilet);
 
             String menurinal = intent.getStringExtra("textViewmenUrinalCount");
-            textViewmenUrinalCount.setText(menurinal);
+            textViewmenUrinalCount.setText("남성용-소변기수 : " + menurinal);
 
             String chlidrentoilet = intent.getStringExtra("textViewmenChildrenToiletCount");
-            textViewmenChildrenToiletCount.setText(chlidrentoilet);
+            textViewmenChildrenToiletCount.setText("남성용-어린이용대변기수 : " + chlidrentoilet);
 
             String childrenurinal = intent.getStringExtra("textViewmenChildrenUrinalCount");
-            textViewmenChildrenUrinalCount.setText(childrenurinal);
+            textViewmenChildrenUrinalCount.setText("남성용-어린이용소변기수 : " + childrenurinal);
 
             String mendisabled = intent.getStringExtra("textViewmenDisabledToiletCount");
-            textViewmenDisabledToiletCount.setText(mendisabled);
+            textViewmenDisabledToiletCount.setText("남성용-장애인용대변기수 : " + mendisabled);
 
             String mendisableduri = intent.getStringExtra("textViewmenDisabledUrinalCount");
-            textViewmenDisabledUrinalCount.setText(mendisableduri);
+            textViewmenDisabledUrinalCount.setText("남성용-장애인용소변기수 : " + mendisableduri);
 
             String emergencybell = intent.getStringExtra("textViewemergencyBellInstalled");
-            textViewemergencyBellInstalled.setText(emergencybell);
+            textViewemergencyBellInstalled.setText("비상벨설치여부 : " + emergencybell);
 
             String emergencybelllo = intent.getStringExtra("textViewemergencyBellLocation");
-            textViewemergencyBellLocation.setText(emergencybelllo);
+            textViewemergencyBellLocation.setText("비상벨설치장소 : " + emergencybelllo);
 
             String womenToiletCount = intent.getStringExtra("textViewwomenToiletCount");
-            textViewwomenToiletCount.setText(womenToiletCount);
+            textViewwomenToiletCount.setText("여성용-대변기수 : " + womenToiletCount);
 
             String womenChildrenToiletCount = intent.getStringExtra("textViewwomenChildrenToiletCount");
-            textViewwomenChildrenToiletCount.setText(womenChildrenToiletCount);
+            textViewwomenChildrenToiletCount.setText("여성용-어린이용대변기수 : " + womenChildrenToiletCount);
 
             String womenDisabledToiletCount = intent.getStringExtra("textViewwomenDisabledToiletCount");
-            textViewwomenDisabledToiletCount.setText(womenDisabledToiletCount);
+            textViewwomenDisabledToiletCount.setText("여성용-장애인용대변기수 : " + womenDisabledToiletCount);
 
             String locationNumberAddress = intent.getStringExtra("textViewlocationNumberAddress");
-            textViewlocationNumberAddress.setText(locationNumberAddress);
+            textViewlocationNumberAddress.setText("위치번호주소 : " + locationNumberAddress);
 
             String locationMapAddress = intent.getStringExtra("textViewlocationMapAddress");
-            textViewlocationMapAddress.setText(locationMapAddress);
+            textViewlocationMapAddress.setText("위치지도별주소 : " + locationMapAddress);
 
             String phoneNumber = intent.getStringExtra("textViewphoneNumber");
-            textViewphoneNumber.setText(phoneNumber);
+            textViewphoneNumber.setText("전화번호 : " + phoneNumber);
 
             String toiletID = intent.getStringExtra("textViewtoiletID");
-            textViewtoiletID.setText(toiletID);
+            textViewtoiletID.setText("화장실ID : " + toiletID);
 
             String restroomEntranceCCTVInstalled = intent.getStringExtra("textViewrestroomEntranceCCTVInstalled");
-            textViewrestroomEntranceCCTVInstalled.setText(restroomEntranceCCTVInstalled);
+            textViewrestroomEntranceCCTVInstalled.setText("화장실입구CCTV설치유무 : " + restroomEntranceCCTVInstalled);
 
 
-            textViewToiletName.setText(toiletName);
+
         }
     }
 }
